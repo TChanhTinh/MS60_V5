@@ -1,7 +1,7 @@
 if BOARD_MS60
 
 config ZMK_KEYBOARD_NAME
-	default "Mystery_60_Solder"
+	default "Mystery_60V5"
 
 if USB_DEVICE_STACK
 
