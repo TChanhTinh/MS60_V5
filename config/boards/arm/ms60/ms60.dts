@@ -82,7 +82,7 @@ vbatt: vbatt {
 	label = "BATTERY";
 	io-channels = <&adc 6>;
 	output-ohms = <2000000>;
-	full-ohms = <(2000000 + 860000)>;
+	full-ohms = <(860000 + 2000000)>;
 	};
 };
 &adc {
