@@ -4,6 +4,13 @@
 #include <dt-bindings/zmk/rgb.h>
 
 &mt {
+    flavor = "tap-unless-interrupted";
+    quick-tap-ms = <100>;
+};
+
+&lt {
+    flavor = "tap-unless-interrupted";
+    quick-tap-ms = <100>;
 };
 
 / {
