@@ -4,7 +4,7 @@
 if BOARD_DEOW
 
 config ZMK_KEYBOARD_NAME
-    default "Mystery_60v5 BLE"
+    default "Mystery_60_BLE"
 
 if USB_DEVICE_STACK
 
