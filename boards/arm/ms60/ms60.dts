@@ -138,9 +138,10 @@
 	full-ohms = <(2000000 + 860000)>;
 	};
 
-    soft_off_wakers { /* deepsleep */
-        compatible = "zmk,soft-off-wakeup-sources";
-        wakeup-sources = <&kscan0>;
+    wakeup_source: wakeup_source {
+        compatible = "zmk,gpio-key-wakeup-trigger";
+        trigger = <&on_off_key>;
+        wakeup-source;
     };
 };
 
