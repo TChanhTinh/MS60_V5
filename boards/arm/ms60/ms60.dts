@@ -138,23 +138,9 @@
 	full-ohms = <(2000000 + 860000)>;
 	};
 
-behaviors {
-        hw_soft_off: hw_soft_off {
-            compatible = "zmk,behavior-soft-off";
-            #binding-cells = <0>;
-            hold-time-ms = <20>;
-        };
-    };
-
-    soft_off_direct_scan: soft_off_direct_scan {
-        compatible = "zmk,kscan-gpio-direct";
-        input-keys = <&on_off_key>;
-        wakeup-source;
-    };
-
     wakeup_source: wakeup_source {
         compatible = "zmk,gpio-key-wakeup-trigger";
-        trigger = <&on_off_key>;
+        trigger = <&soft_off_wakers>;
         wakeup-source;
     };
 
