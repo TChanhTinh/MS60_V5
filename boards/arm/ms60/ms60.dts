@@ -137,11 +137,11 @@
 	output-ohms = <2000000>;
 	full-ohms = <(2000000 + 860000)>;
 	};
-};
 
     soft_off_wakers {
         compatible = "zmk,soft-off-wakeup-sources";
         wakeup-sources = <&kscan0>;
+    };
 };
 
 &adc {
