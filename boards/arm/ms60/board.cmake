@@ -1,4 +1,4 @@
-# Copyright (c) 2024 Deemen17 Works
+# Copyright (c) 2024 Mysteryassss
 # SPDX-License-Identifier: MIT
 
 set(OPENOCD_NRF5_SUBFAMILY nrf52)
