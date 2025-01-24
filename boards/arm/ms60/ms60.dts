@@ -118,7 +118,7 @@
     leds {
         compatible = "gpio-leds";
         blue_led: led_0 {
-            gpios = <&gpio0 8 GPIO_ACTIVE_HIGH>;
+            gpios = <&gpio0 22 GPIO_ACTIVE_HIGH>;
             label = "Blue LED";
         };
     };
@@ -126,7 +126,7 @@
     ext-power {
         compatible = "zmk,ext-power-generic";
         label = "EXT_POWER";
-        control-gpios = <&gpio0 9 GPIO_ACTIVE_HIGH>;
+        control-gpios = <&gpio0 31 GPIO_ACTIVE_HIGH>;
     };
      soft_off_wakers {
          compatible = "zmk,soft-off-wakeup-sources";
