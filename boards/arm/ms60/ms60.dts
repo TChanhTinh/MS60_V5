@@ -21,7 +21,6 @@
         zephyr,code-partition = &code_partition;
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
-        zmk,battery = &vbatt;
         zmk,kscan = &kscan0;
         zmk,underglow = &led_strip;
         zmk,physical-layout = &ms60_all;
@@ -90,29 +89,29 @@
 
         diode-direction = "col2row";
         	row-gpios
-			= <&gpio1 4  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&gpio1 2  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&gpio1 0  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			= <&gpio0 29  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&gpio0 2  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&gpio1 13  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&gpio0 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 			;  
 
 		col-gpios
-			= <&gpio1 11  GPIO_ACTIVE_HIGH>
-			, <&gpio1 10  GPIO_ACTIVE_HIGH>
-			, <&gpio0 3   GPIO_ACTIVE_HIGH>
-			, <&gpio0 28  GPIO_ACTIVE_HIGH>
-			, <&gpio1 13  GPIO_ACTIVE_HIGH>
-            		, <&gpio0 2   GPIO_ACTIVE_HIGH>
-        		, <&gpio0 29  GPIO_ACTIVE_HIGH>
-        		, <&gpio0 31  GPIO_ACTIVE_HIGH>
-        		, <&gpio0 5   GPIO_ACTIVE_HIGH>
-        		, <&gpio1 9   GPIO_ACTIVE_HIGH>
-			, <&gpio0 13  GPIO_ACTIVE_HIGH>
-		        , <&gpio1 6   GPIO_ACTIVE_HIGH>
-			, <&gpio0 10  GPIO_ACTIVE_HIGH>
-			, <&gpio0 9   GPIO_ACTIVE_HIGH>
+			= <&gpio1 9  GPIO_ACTIVE_HIGH>
+			, <&gpio0 5  GPIO_ACTIVE_HIGH>
+			, <&gpio0 30   GPIO_ACTIVE_HIGH>
+			, <&gpio0 26  GPIO_ACTIVE_HIGH>
+			, <&gpio0 6  GPIO_ACTIVE_HIGH>
+            		, <&gpio0 8   GPIO_ACTIVE_HIGH>
+        		, <&gpio1 11  GPIO_ACTIVE_HIGH>
+        		, <&gpio0 4  GPIO_ACTIVE_HIGH>
+        		, <&gpio0 12   GPIO_ACTIVE_HIGH>
+        		, <&gpio0 7   GPIO_ACTIVE_HIGH>
+			, <&gpio1 6  GPIO_ACTIVE_HIGH>
+		        , <&gpio0 10   GPIO_ACTIVE_HIGH>
+			, <&gpio0 9  GPIO_ACTIVE_HIGH>
 			, <&gpio0 24  GPIO_ACTIVE_HIGH>
+			, <&gpio0 13  GPIO_ACTIVE_HIGH>
 			;
 	};
 
@@ -129,14 +128,6 @@
         label = "EXT_POWER";
         control-gpios = <&gpio0 9 GPIO_ACTIVE_HIGH>;
     };
-
-    vbatt: vbatt {
-	compatible = "zmk,battery-voltage-divider";
-	label = "BATTERY";
-	io-channels = <&adc 6>;
-	output-ohms = <2000000>;
-	full-ohms = <(2000000 + 860000)>;
-	};
      soft_off_wakers {
          compatible = "zmk,soft-off-wakeup-sources";
          wakeup-sources = <&kscan0>;
