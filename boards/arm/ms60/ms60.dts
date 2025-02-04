@@ -7,6 +7,7 @@
 /dts-v1/;
 #include <nordic/nrf52840_qiaa.dtsi>
 #include "ms60-pinctrl.dtsi"
+#include "ms60-layouts.dtsi"
 
 #include <dt-bindings/led/led.h>
 
