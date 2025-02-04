@@ -76,7 +76,14 @@
 			;
 	};
 ext-power {
-	status = "okay";
+    compatible = "zmk,ext-power-generic";
+    label = "EXT_POWER";
+    control-gpios = <&gpio0 31 GPIO_ACTIVE_HIGH>;
+};
+soft_off_wakers {
+    compatible = "zmk,soft-off-wakeup-sources";
+    wakeup-sources = <&kscan0>;
+    status = "okay";
 };
 vbatt: vbatt {
 	compatible = "zmk,battery-voltage-divider";
@@ -160,6 +167,7 @@ zephyr_udc0: &usbd {
     pinctrl-0 = <&spi3_default>;
     pinctrl-1 = <&spi3_sleep>;
     pinctrl-names = "default", "sleep";
+	status = "okay";
 
     led_strip: ws2812@0 {
         compatible = "worldsemi,ws2812-spi";
