@@ -24,17 +24,17 @@
 
         booloader {
             bindings = <&bootloader>;
-            key-positions = <11 12 13 14 0 1 2 3>;
+            key-positions = <14 0>;
         };
 
         resetbleprofile {
             bindings = <&bt BT_CLR>;
-            key-positions = <0 1 2 3>;
+            key-positions = <15 28>;
         };
 
         clearall {
             bindings = <&bt BT_CLR_ALL>;
-            key-positions = <0 1 2 3 4>;
+            key-positions = <29 41>;
         };
 
         print {
