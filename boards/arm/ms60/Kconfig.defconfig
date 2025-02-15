@@ -1,10 +1,7 @@
-# Copyright (c) 2024 Mysteryassss
-# SPDX-License-Identifier: MIT
-
 if BOARD_MS60
 
 config ZMK_KEYBOARD_NAME
-    default "Mystery_60v5_BLE"
+	default "Mystery_60V5"
 
 if USB_DEVICE_STACK
 
@@ -14,12 +11,12 @@ config USB_NRFX
 endif # USB_DEVICE_STACK
 
 config BT_CTLR
-    default BT
+	default BT
 
 config ZMK_BLE
-    default y
+	default y
 
 config ZMK_USB
-    default y
+	default y
 
-endif #
+endif # 

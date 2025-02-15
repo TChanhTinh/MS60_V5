@@ -6,7 +6,8 @@ arch: arm
 features:
   - keys
   - underglow
+  - encoder
 outputs:
   - usb
   - ble
-url: https://www.facebook.com/lequoctrong16.8
+url: none
