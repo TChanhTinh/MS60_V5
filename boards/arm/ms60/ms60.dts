@@ -25,7 +25,6 @@
         zephyr,console = &cdc_acm_uart;
         zmk,battery = &vbatt;
         zmk,kscan = &kscan0;
-        zmk,underglow = &led_strip;
 		zmk,physical-layout = &ms60_all;
 	};
 
